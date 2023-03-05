@@ -1,9 +1,11 @@
+<script src="/js/ratings.js" ></script>
+
 <section class="movie-details">
 	<div>
 		<h1 class="movie-title"><%= movieDetails.title %></h1>
-		<!-- <p class="movie-description"> -->
-		<%- marked(movieDetails.intro) %>
-		<!-- </p> -->
+		<p class="movie-description">
+		<%- marked.parseInline(movieDetails.intro) %>
+		</p>
 		<hr />
 		<!-- <p class="movie-genres">${genreString}</p>
 		<p class="movie-info">
@@ -19,4 +21,12 @@
 		alt="<%= movieDetails.title %>"
 		class="movie-poster"
 	/>
+	<%- include('../partials/addReview') %>
+	<div id="rating-container-element">
+		<p class="movie-rating"></p>
+		<ul class="movie-rating-hats">
+		</ul>
+	</div>
 </section>
+
+<%- include('../partials/reviewList') %>

@@ -2,6 +2,8 @@
 
 [Whimsical](https://whimsical.com/tomtens-api-9m4LThum8Xc2tLJEWhHF7y) (meeting notes)
 
+[Whimsical](https://whimsical.com/tomtens-api-9m4LThum8Xc2tLJEWhHF7y) (meeting notes)
+
 ## API DOCUMENTATION
 
 ### /api/screenings
@@ -26,7 +28,7 @@ GET: Get movie with the {id}
 
 ### /api/movies/{id}/reviews?page=1
 
-*GET*: Get all the reviews for movie with the {id}  
+*GET*: Get all the verified reviews for movie with the {id}
 
 ---
 
@@ -51,7 +53,7 @@ Authorization: “Bearer {token}”
 
 ### /api/movies/{id}/rating
 
-*GET*: Get the rating for the movie with the {id}  
+*GET*: Get the rating, from reviews that are verified, for the movie with the {id}
 
 ---
 

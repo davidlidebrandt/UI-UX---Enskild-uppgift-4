@@ -2,7 +2,7 @@
 	max-width: 900px;
 	margin-inline: auto;
 	display: grid;
-	grid-template-columns: 200px 1fr;
+	grid-template-columns: 275px 1fr;
 
 	@media (max-width: $bp-medium) {
 		grid-template-columns: 100%;
@@ -92,6 +92,50 @@
 		max-width: 180px;
 		margin-inline: auto;
 		margin-top: 3rem;
+	}
+
+	#rating-container-element {
+		grid-column: 1;
+		grid-row: 2;
+	
+		@media (max-width: $bp-medium) {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		
+		.movie-rating {
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.3rem;
+			color: $c-red-light;
+		}
+
+		.movie-rating-hats {
+			list-style-type: none;
+			display: flex;
+			padding-bottom: 0.2rem;
+			justify-content: center;	
+	
+
+			.hat-fill, .hat-halffill, .hat-nofill {
+				width: 25px;
+				height: 25px;
+				background-size: 100%;
+				display: block;
+			}
+	
+			.hat-nofill {
+				background-image: url("/img/hat-nofill.png");
+			}
+	
+			.hat-fill {
+				background-image: url("/img/hat-fill.png");
+			}
+	
+			.hat-halffill {
+				background-image: url("/img/hat-halffill.png");
+			}
+		}
 	}
 
 	.movie-showtimes {

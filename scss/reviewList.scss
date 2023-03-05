@@ -1,0 +1,80 @@
+.movie-details-reviews {
+	max-width: 900px;
+	margin-inline: auto;
+
+	button {
+		background-color: transparent;
+		background-image: url("/img/arrow.png");
+		background-size: 100%;
+		border: none;
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+		margin-left: 1.5rem;
+		opacity: 0.9;
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+		&:disabled {
+			opacity: 0.4;
+		}
+		&#buttonPrev {
+			transform: rotate(180deg);
+		}
+		&#buttonNext {
+			float: right;
+			margin-right: 1.5rem;
+		}
+	}
+}
+
+ul#reviewList {
+	padding: 1rem;
+
+	li {
+		padding: 1rem;
+		list-style-type: none;
+		border-radius: 6px;
+		margin: 0.8rem 0;
+		background-color: rgba($c-red-light, 0.6);
+		background-color: $c-gray-light;
+		box-shadow: 0px 6px 12px 0px rgb(0 0 0 / 20%);
+
+		.review-rating {
+			display: flex;
+			padding-bottom: 0.2rem;
+			.review-hat.filled {
+				background-image: url("/img/hat-fill.png");
+				width: 25px;
+				height: 25px;
+				background-size: 100%;
+				display: block;
+			}
+			.review-hat.nofill {
+				background-size: 100%;
+				background-image: url("/img/hat-nofill.png");
+				display: block;
+				width: 25px;
+				height: 25px;
+			}
+		}
+		.review-comment {
+			margin-top: 10px;
+			display: block;
+		}
+		.review-author {
+			font-size: 0.9rem;
+			margin-left: 5px;
+			margin-right: 10px;
+			font-weight: 700;
+		}
+		.review-date {
+			font-weight: 700;
+			transform: translateY(-0.5px);
+			font-size: 0.8rem;
+			font-family: $font-two;
+			display: inline-block;
+		}
+	}
+}

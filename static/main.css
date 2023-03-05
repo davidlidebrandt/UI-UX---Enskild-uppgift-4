@@ -576,7 +576,7 @@ header .header-list.open li img {
   max-width: 900px;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 275px 1fr;
 }
 @media (max-width: 750px) {
   .movie-details {
@@ -650,6 +650,43 @@ header .header-list.open li img {
   max-width: 180px;
   margin-inline: auto;
   margin-top: 3rem;
+}
+.movie-details #rating-container-element {
+  grid-column: 1;
+  grid-row: 2;
+}
+@media (max-width: 750px) {
+  .movie-details #rating-container-element {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+.movie-details #rating-container-element .movie-rating {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #9e2a2b;
+}
+.movie-details #rating-container-element .movie-rating-hats {
+  list-style-type: none;
+  display: flex;
+  padding-bottom: 0.2rem;
+  justify-content: center;
+}
+.movie-details #rating-container-element .movie-rating-hats .hat-fill, .movie-details #rating-container-element .movie-rating-hats .hat-halffill, .movie-details #rating-container-element .movie-rating-hats .hat-nofill {
+  width: 25px;
+  height: 25px;
+  background-size: 100%;
+  display: block;
+}
+.movie-details #rating-container-element .movie-rating-hats .hat-nofill {
+  background-image: url("/img/hat-nofill.png");
+}
+.movie-details #rating-container-element .movie-rating-hats .hat-fill {
+  background-image: url("/img/hat-fill.png");
+}
+.movie-details #rating-container-element .movie-rating-hats .hat-halffill {
+  background-image: url("/img/hat-halffill.png");
 }
 .movie-details .movie-showtimes {
   padding-bottom: 2rem;
@@ -1570,6 +1607,156 @@ input[type=password]:focus {
 .error-page img {
   margin: 0 auto;
   max-width: 500px;
+}
+
+.add-review hr {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 750px) {
+  .add-review {
+    width: 80%;
+    margin: auto;
+  }
+  .add-review .add-review-content {
+    width: 80%;
+    margin: auto;
+  }
+}
+.add-review .add-review-button {
+  display: block;
+  margin: 0.5em auto;
+  background-color: #fff3b0;
+  color: #9e2a2b;
+  border: 0;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 1.5em;
+}
+.add-review .add-review-button:hover {
+  background-color: #e3d582;
+  cursor: pointer;
+}
+.add-review .clicked {
+  background-color: #e3d582;
+}
+.add-review .add-review-content {
+  background-color: #fff3b0;
+  color: #9e2a2b;
+  font-weight: bold;
+  padding: 1em;
+  border-radius: 1.5em;
+  display: none;
+  padding-bottom: 2.5em;
+}
+.add-review .show {
+  display: block;
+}
+.add-review .hide {
+  display: none;
+}
+.add-review form input {
+  margin: 0.25em 0;
+}
+.add-review input#name {
+  width: 50%;
+}
+.add-review input#rating {
+  width: 30%;
+}
+.add-review textarea {
+  min-width: 100%;
+  max-width: 100%;
+}
+.add-review .submit-review, .add-review .add-review-login {
+  padding: 0.5em 0.8em;
+  background-color: #9e2a2b;
+  color: #edf2f4;
+  margin-left: auto;
+  font-weight: bold;
+  margin-right: 0;
+  border-radius: 1em;
+  float: right;
+  border: none;
+  cursor: pointer;
+}
+.movie-details-reviews {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.movie-details-reviews button {
+  background-color: transparent;
+  background-image: url("/img/arrow.png");
+  background-size: 100%;
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-left: 1.5rem;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.movie-details-reviews button:hover {
+  opacity: 1;
+}
+.movie-details-reviews button:disabled {
+  opacity: 0.4;
+}
+.movie-details-reviews button#buttonPrev {
+  transform: rotate(180deg);
+}
+.movie-details-reviews button#buttonNext {
+  float: right;
+  margin-right: 1.5rem;
+}
+
+ul#reviewList {
+  padding: 1rem;
+}
+ul#reviewList li {
+  padding: 1rem;
+  list-style-type: none;
+  border-radius: 6px;
+  margin: 0.8rem 0;
+  background-color: rgba(158, 42, 43, 0.6);
+  background-color: #edf2f4;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+}
+ul#reviewList li .review-rating {
+  display: flex;
+  padding-bottom: 0.2rem;
+}
+ul#reviewList li .review-rating .review-hat.filled {
+  background-image: url("/img/hat-fill.png");
+  width: 25px;
+  height: 25px;
+  background-size: 100%;
+  display: block;
+}
+ul#reviewList li .review-rating .review-hat.nofill {
+  background-size: 100%;
+  background-image: url("/img/hat-nofill.png");
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+ul#reviewList li .review-comment {
+  margin-top: 10px;
+  display: block;
+}
+ul#reviewList li .review-author {
+  font-size: 0.9rem;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+ul#reviewList li .review-date {
+  font-weight: 700;
+  transform: translateY(-0.5px);
+  font-size: 0.8rem;
+  font-family: "Mukta";
+  display: inline-block;
 }
 
 :root {

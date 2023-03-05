@@ -1,8 +1,8 @@
 import express from "express";
 import { marked } from "marked";
 import expressLayouts from "express-ejs-layouts";
-import { loadMovie, loadMovies } from "../static/js/movies.js";
-import apiRouter from "api.js";
+import { loadMovie, loadMovies } from "./movies.js";
+import apiRouter from "./api.js";
 
 const app = express();
 

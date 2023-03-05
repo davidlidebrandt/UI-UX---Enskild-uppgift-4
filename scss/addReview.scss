@@ -1,0 +1,91 @@
+.add-review {
+  hr {
+    margin-bottom: .5rem;
+  }
+
+  @media (max-width: $bp-medium) {
+    width: 80%;
+    margin: auto;
+
+    .add-review-content {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  .add-review-button {
+    display: block;
+    margin: 0.5em auto;
+    background-color: $c-yellow;
+    color: $c-red-light;
+    border: 0;
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 1.5em;
+
+    &:hover {
+      background-color: #e3d582;
+      cursor: pointer;
+    }
+  }
+
+  .clicked {
+    background-color: #e3d582;
+  }
+
+  .add-review-content {
+    background-color: $c-yellow;
+    color: $c-red-light;
+    font-weight: bold;
+    padding: 1em;
+    border-radius: 1.5em;
+    display: none;
+    padding-bottom: 2.5em;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  form {
+    input {
+      margin: 0.25em 0;
+    }
+  }
+
+  input#name {
+    width: 50%;
+  }
+
+  input#rating {
+    width: 30%;
+  }
+
+  textarea {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .submit-review {
+    padding: 0.5em 0.8em;
+    background-color: $c-red-light;
+    color: $c-gray-light;
+    margin-left: auto;
+    font-weight: bold;
+    margin-right: 0;
+    border-radius: 1em;
+    float: right;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-review-login {
+    @extend .submit-review;
+  }
+}
