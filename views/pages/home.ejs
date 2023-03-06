@@ -1,6 +1,5 @@
 <script src="js/index.js" type="module"></script>
 <script src="js/carousel.js" type="module"></script>
-
 <script src="js/search.js" type="module"></script>
 <script src="js/asideShowTimes.js" type="module"></script>
 
@@ -42,9 +41,9 @@
 		<h2 class="current-movies-header">På bion just nu</h2>
 		<ul class="current-movies-list">
 			<% movies.data.forEach(function(movie) { %>
-
-			<a href="movie/<%= movie.id %>">
-				<li class="current-movies-card">
+			<li class="current-movies-card">
+				<a href="movie/<%= movie.id %>">
+				
 					<img
 						src="<%= movie.attributes.image.url %>"
 						alt="<%= movie.attributes.title %> Poster"
@@ -53,8 +52,8 @@
 					<h3 class="current-movies-card-title">
 						<%- movie.attributes.title %>
 					</h3>
-				</li></a
-			>
+				</a>
+			</li>
 			<% }); %>
 		</ul>
 	</section>
